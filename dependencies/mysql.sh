@@ -1,7 +1,7 @@
 #!/bin/sh
 ## mysql
 
-sudo apt-get -t stretch -y install mysql-server
-sudo apt-get -t stretch -y install mysql-client
-sudo apt-get -t stretch -y install mysql-common
-sudo apt-get -t stretch -y install mysql-utilities
+sudo apt-get install mysql-server
+sudo apt-get install mysql-client
+sudo apt-get install mysql-common
+sudo apt-get install mysql-utilities
