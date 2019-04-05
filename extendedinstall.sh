@@ -23,20 +23,8 @@ fi }
 echo "This is The Deathbybandaid Pi Install" > herewego_textbox
 whiptail --textbox --title "Let's Start!" herewego_textbox 10 80
 
-## Hostname
-sudo bash /etc/piadvanced/modules/hostname.sh
-
-## Static IP for eth0
-sudo bash /etc/piadvanced/modules/eth0.sh
-
 # vlan
 sudo bash /etc/piadvanced/modules/virtualinterface.sh
-
-## Wifi Credentials
-sudo bash /etc/piadvanced/modules/wifissid.sh
-
-## Staic IP for wlan0
-sudo bash /etc/piadvanced/modules/wlan0.sh
 
 ## Memory Split
 sudo bash /etc/piadvanced/modules/memorysplit.sh
@@ -47,21 +35,11 @@ sudo bash /etc/piadvanced/modules/totalmemtweak.sh
 ## Swap sapce tweak
 sudo bash /etc/piadvanced/modules/swapspacetweak.sh
 
-## SSH
-sudo bash /etc/piadvanced/modules/ssh.sh
-
-## Time
-sudo bash /etc/piadvanced/modules/timezone.sh
-sudo bash /etc/piadvanced/modules/ntp.sh
-
 ## Random Number Generation fix
 sudo bash /etc/piadvanced/modules/rngtools.sh
 
 ## Nano Line number
 sudo bash /etc/piadvanced/modules/nanolinenumberhing.sh
-
-## Better MOTD message
-sudo bash /etc/piadvanced/modules/motd.sh
 
 ## HTOP
 sudo bash /etc/piadvanced/modules/htop.sh
@@ -96,22 +74,6 @@ sudo bash /etc/piadvanced/modules/fail2ban.sh
 ## PSAD
 sudo bash /etc/piadvanced/modules/psad.sh
 
-## samba
-sudo bash /etc/piadvanced/modules/sambashare.sh
-
-## Dynamic Update Clients
-echo "The next Three installs are dynamic update clients for No-IP, Dyndns, and DuckDNS" > ducs_textbox
-whiptail --textbox --title "Dynamic Update Options" ducs_textbox 10 80
-
-## No-ip Dynamic Update Client
-sudo bash /etc/piadvanced/modules/noip.sh
-
-## Dyndns
-sudo bash /etc/piadvanced/modules/ddclient.sh
-
-## DuckDNS
-sudo bash /etc/piadvanced/modules/duckdns.sh
-
 ## VPNs
 echo "The next two installs are openvpn and pivpn" > vpns_textbox
 whiptail --textbox --title "VPN Options" vpns_textbox 10 80
@@ -137,39 +99,17 @@ fi
 ## DNSCrypt
 sudo bash /etc/piadvanced/modules/dnscrypt.sh
 
-## Webserver settings
-echo "Let's modify the webserver configurations. Users of Pi-Hole, may need to look at the Lighttpd settings." > webserver_textbox
-whiptail --textbox --title "Webserver Questions Ahead" webserver_textbox 10 80
-sudo bash /etc/piadvanced/modules/lighttpd.sh
-sudo bash /etc/piadvanced/modules/apache.sh
-sudo bash /etc/piadvanced/modules/nginx.sh
-
 ## Usermin
 sudo bash /etc/piadvanced/modules/usermin.sh
 
 ## Webmin
 sudo bash /etc/piadvanced/modules/webmin.sh
 
-## xRDP
-sudo bash /etc/piadvanced/modules/xrdp.sh
-
 ## shellinabox
 sudo bash /etc/piadvanced/modules/shellinabox.sh
 
 ## Guacamole
 sudo bash /etc/piadvanced/modules/guacamole.sh
-
-## CUPS
-sudo bash /etc/piadvanced/modules/cups.sh
-
-## rpimonitor
-sudo bash /etc/piadvanced/modules/rpimonitor.sh
-
-## phpmyadmin
-sudo bash /etc/piadvanced/modules/phpmyadmin.sh
-
-## nagios
-sudo bash /etc/piadvanced/modules/nagios.sh
 
 ## Proxies
 echo "The next two installs are Squid and Privoxy, choose one ONLY!" > proxies_textbox
@@ -184,9 +124,6 @@ sudo bash /etc/piadvanced/modules/squid.sh
 ## nxfilter
 sudo bash /etc/piadvanced/modules/nxfilter.sh
 
-## Speedtest tweet
-sudo bash /etc/piadvanced/modules/speedtesttweet.sh
-
 ## vesta
 sudo bash /etc/piadvanced/modules/vesta.sh
 
@@ -200,12 +137,6 @@ sudo bash /etc/piadvanced/modules/grafana.sh
 echo "Warning: The OpenVas install (next) is untested." > openvas_textbox
 whiptail --textbox --title "OpenVas" openvas_textbox 10 80
 sudo bash /etc/piadvanced/modules/openvas.sh
-
-## plexboard
-sudo bash /etc/piadvanced/modules/plexboard.sh
-
-## HTPC
-sudo bash /etc/piadvanced/modules/atomic.sh
 
 ## Dplatform
 sudo bash /etc/piadvanced/modules/dplatform.sh
